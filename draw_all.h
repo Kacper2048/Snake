@@ -1,6 +1,7 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QGraphicsItem>
+#include <QCoreApplication>
 #include "snake_map.h"
 #include <vector>
 

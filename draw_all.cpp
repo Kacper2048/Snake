@@ -10,10 +10,10 @@ Draw::Draw(int x, int y)
 
     scene = new QGraphicsScene();
 
-    tex_head = new QPixmap("C:/Users/spaj/Desktop/snake40.png");
-    tex_food = new QPixmap("C:/Users/spaj/Desktop/food40.png");
-    tex_body = new QPixmap("C:/Users/spaj/Desktop/body40.png");
-    tex_map = new QPixmap("C:/Users/spaj/Desktop/lawn.png");
+    tex_head = new QPixmap("C:/Users/spaj/Desktop/snake/images/snake40.png");
+    tex_food = new QPixmap("C:/Users/spaj/Desktop/snake/images/food40.png");
+    tex_body = new QPixmap("C:/Users/spaj/Desktop/snake/images/body40.png");
+    tex_map = new QPixmap("C:/Users/spaj/Desktop/snake/images/lawnx.png");
 
     itemHead = new QGraphicsPixmapItem(*tex_head);
     itemFood = new QGraphicsPixmapItem(*tex_food);
@@ -95,7 +95,6 @@ void Draw::updateMove()
 
     if(actual_food < raw_board->snake->getValue()-3) //add new body block to the map
     {
-        qDebug() << "CYCE";
         actual_food=raw_board->snake->getValue()-3;
         eatenFood++;
     }
