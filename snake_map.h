@@ -4,10 +4,12 @@
 class SnakeMap
 {
     private:
+
     bool game_state = false;
     int xSize;
     int ySize;
     int **array = nullptr;
+    int lenSnake = 3; //head and 2 blocks for body
 
     public:
     Snake * snake = nullptr;
@@ -22,5 +24,7 @@ class SnakeMap
     void checkState();
     int ** getRawMap(){return array;}
     bool getGameState(){return game_state;}
+    void updateMap();
+    void restartMap();
 };
 

@@ -1,6 +1,6 @@
 #include "snake.h"
 
-Snake::Snake(int x, int y, int val, int dir)
+Snake::Snake(int x, int y, int val, int dir) : value_start(val), value_x(x), value_y(y)
 {
     this->pos_x = x;
     this->pos_y = y;
@@ -22,4 +22,12 @@ void Snake::makeMove()
 void Snake::increaseByFood()
 {
     value++;
+}
+
+void Snake::restart()
+{
+    value=value_start;
+    pos_x = value_x;
+    pos_y = value_y;
+    dir = 0;
 }
